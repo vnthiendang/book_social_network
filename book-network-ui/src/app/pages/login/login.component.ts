@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit{
     }).subscribe({
       next: (res)=>{
         this.tokenService.token = res.token as string;
-        // this.router.navigate(['books']);
+        this.router.navigate(['books']);
         console.log(res);
       },
       error: (err)=>{
